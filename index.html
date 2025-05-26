@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portal Propiedad Horizontal</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <!-- LOGIN -->
+  <div class="login-container" id="login">
+    <h2>Bienvenido al portal</h2>
+    <form onsubmit="login(event)">
+      <label for="email">Correo electrónico</label>
+      <input type="email" id="email" placeholder="Correo electrónico" required />
+
+      <label for="password">Contraseña</label>
+      <input type="password" id="password" placeholder="Contraseña" required />
+
+      <button type="submit">Ingresar</button>
+    </form>
+  </div>
+
+  <!-- DASHBOARD DE MÓDULOS -->
+  <div class="dashboard" id="dashboard" style="display: none;">
+    <h2>Panel Principal</h2>
+    <div class="modules">
+      <a class="card" href="https://github.com/andresperdomo1323/Gestion-Residencial/tree/master" target="_blank">Gestión Residencial</a>
+      <a class="card" href="https://tusitio.com/ingreso" target="_blank">Ingreso con Reconocimiento Facial</a>
+      <a class="card" href="https://chatbot-zonas-residencia-git-692e50-angeldavidescobars-projects.vercel.app/" target="_blank">Chatbot de Reservas</a>
+      <a class="card" href="https://tusitio.com/parqueadero" target="_blank">Parqueadero y Seguridad</a>
+      <a class="card" href="https://tusitio.com/residuos" target="_blank">Entrega de Residuos</a>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f2f5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* LOGIN */
+.login-container {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.login-container h2 {
+  margin-bottom: 1.5rem;
+  font-size: 24px;
+  color: #333;
+}
+
+.login-container label {
+  display: block;
+  text-align: left;
+  margin-bottom: 0.3rem;
+  color: #555;
+  font-weight: 500;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.login-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #4a90e2;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #357ab8;
+}
+
+/* DASHBOARD */
+.dashboard {
+  display: none;
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.dashboard h2 {
+  margin-bottom: 1rem;
+  font-size: 26px;
+  color: #222;
+}
+
+/* MÓDULOS */
+.modules {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 1rem;
+}
+
+.card {
+  background: #e0e0e0;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: none;
+  color: #333;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.card:hover {
+  background: #ccc;
+  transform: scale(1.02);
+}
+
+/* RESPONSIVE */
+@media (min-width: 600px) {
+  .modules {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
