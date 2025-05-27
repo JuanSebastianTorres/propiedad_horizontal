@@ -5,33 +5,60 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Portal Propiedad Horizontal</title>
   <link rel="stylesheet" href="styles.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
 </head>
 <body>
   <!-- LOGIN -->
   <div class="login-container" id="login">
     <h2>Bienvenido al portal</h2>
+
     <form onsubmit="login(event)">
-      <label for="email">Correo electrónico</label>
-      <input type="email" id="email" placeholder="Correo electrónico" required />
+  <div class="input-group">
+    <i class="fas fa-envelope"></i>
+    <input type="email" id="email" placeholder="Correo electrónico" required />
+  </div>
 
-      <label for="password">Contraseña</label>
-      <input type="password" id="password" placeholder="Contraseña" required />
+  <div class="input-group">
+    <i class="fas fa-lock"></i>
+    <input type="password" id="password" placeholder="Contraseña" required />
+  </div>
 
-      <button type="submit">Ingresar</button>
-    </form>
+  <button type="submit">Ingresar</button>
+</form>
+
   </div>
 
   <!-- DASHBOARD DE MÓDULOS -->
   <div class="dashboard" id="dashboard" style="display: none;">
+     <button class="logout-icon" onclick="logout()" title="Cerrar sesión">
+    <i class="fas fa-sign-out-alt"></i>
+  </button>
+
     <h2>Panel Principal</h2>
-    <div class="modules">
-      <a class="card" href="https://github.com/andresperdomo1323/Gestion-Residencial/tree/master" target="_blank">Gestión Residencial</a>
-      <a class="card" href="https://tusitio.com/ingreso" target="_blank">Ingreso con Reconocimiento Facial</a>
-      <a class="card" href="https://chatbot-zonas-residencia-git-692e50-angeldavidescobars-projects.vercel.app/" target="_blank">Chatbot de Reservas</a>
-      <a class="card" href="https://tusitio.com/parqueadero" target="_blank">Parqueadero y Seguridad</a>
-      <a class="card" href="https://tusitio.com/residuos" target="_blank">Entrega de Residuos</a>
+  <div class="modules">
+    <button class="card" onclick="openPreview('https://github.com/andresperdomo1323/Gestion-Residencial/tree/master')">Gestión Residencial</button>
+    <button class="card" onclick="openPreview('https://tusitio.com/ingreso')">Ingreso con Reconocimiento Facial</button>
+    <button class="card" onclick="openPreview('https://chatbot-zonas-residencia-git-692e50-angeldavidescobars-projects.vercel.app/')">Chatbot de Reservas</button>
+    <button class="card" onclick="openPreview('https://tusitio.com/parqueadero')">Parqueadero y Seguridad</button>
+    <button class="card" onclick="openPreview('https://tusitio.com/residuos')">Entrega de Residuos</button>
+  </div>
+  </div>
+
+
+</div>
+
+<div id="previewModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closePreview()">&times;</span>
+    <iframe id="previewFrame" src="" frameborder="0"></iframe>
+    <div class="modal-footer">
+      <a id="goToSite" href="#" target="_blank">Ir al sitio completo</a>
     </div>
   </div>
+</div>
+
 
   <script src="app.js"></script>
 </body>

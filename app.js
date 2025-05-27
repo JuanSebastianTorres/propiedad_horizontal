@@ -13,4 +13,25 @@ function login(event) {
   }
 }
 
+function logout() {
+  document.getElementById("dashboard").style.display = "none";
+  document.getElementById("login").style.display = "block";
+
+  // Limpiar campos (opcional)
+  document.getElementById("email").value = "";
+  document.getElementById("password").value = "";
+}
+
+
+function openPreview(url) {
+  document.getElementById('previewFrame').src = url;
+  document.getElementById('goToSite').href = url;
+  document.getElementById('previewModal').style.display = 'flex';
+}
+
+function closePreview() {
+  document.getElementById('previewFrame').src = '';
+  document.getElementById('previewModal').style.display = 'none';
+}
+
   
